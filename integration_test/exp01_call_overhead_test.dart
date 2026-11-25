@@ -11,9 +11,8 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:ffi_gen_jni_gen/main.dart' as app;
 import 'package:ffi_gen_jni_gen/rnd/exp01_call_overhead.dart';
-import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 
@@ -23,10 +22,19 @@ void main() {
   testWidgets(
     'experiment 01: call overhead jnigen vs MethodChannel',
     (tester) async {
-      // Start the real app so the MethodChannel handler in MainActivity is
-      // registered on the same engine the test runs in.
-      app.main();
-      await tester.pumpAndSettle();
+      // A static screen, NOT the dashboard: its 2 s refresh timer and
+      // rebuilds run between awaited MethodChannel calls but never inside a
+      // synchronous jnigen loop, which inflated MethodChannel times ~1.2-2.4x
+      // in the first run. The `rnd/bench` channel is registered natively in
+      // MainActivity.configureFlutterEngine, so the app's main() isn't needed.
+      // For the reference numbers use lib/rnd/main_exp01.dart (no test
+      // binding at all).
+      await tester.pumpWidget(
+        const Directionality(
+          textDirection: TextDirection.ltr,
+          child: Center(child: Text('Experiment 01 running…')),
+        ),
+      );
 
       final report = await runExperiment01(
         log: (line) => debugPrint('EXP01 $line'),

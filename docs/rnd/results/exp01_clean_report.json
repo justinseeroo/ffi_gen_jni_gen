@@ -1,0 +1,515 @@
+{
+  "experiment": "01_call_overhead_android",
+  "build_mode": "profile",
+  "device": {
+    "manufacturer": "Xiaomi",
+    "model": "2406ERN9CI",
+    "android": "16",
+    "api_level": 36
+  },
+  "runner": {
+    "runs": 5,
+    "warmup_calls": 1000
+  },
+  "echo_sample": "\"Hello, Flutter \\u21c4 Kotlin \\ud83d\\udc4b\\ud83c\\udffd \\u00f1\"",
+  "probes": [
+    {
+      "name": "add_small",
+      "expected": "3",
+      "jnigen": "3",
+      "jnigen_matches": true,
+      "method_channel": "3",
+      "method_channel_matches": true
+    },
+    {
+      "name": "add_negative",
+      "expected": "-2",
+      "jnigen": "-2",
+      "jnigen_matches": true,
+      "method_channel": "-2",
+      "method_channel_matches": true
+    },
+    {
+      "name": "add_int32_overflow",
+      "expected": "-2147483648",
+      "jnigen": "-2147483648",
+      "jnigen_matches": true,
+      "method_channel": "-2147483648",
+      "method_channel_matches": true
+    },
+    {
+      "name": "add_arg_beyond_int32",
+      "expected": "2147483648",
+      "jnigen": "-2147483648",
+      "jnigen_matches": false,
+      "method_channel": "THREW PlatformException(code: error, message: java.lang.Long cannot be cast to java.lang.Integer)",
+      "method_channel_matches": false
+    },
+    {
+      "name": "echo_empty",
+      "expected": "\"\"",
+      "jnigen": "\"\"",
+      "jnigen_matches": true,
+      "method_channel": "\"\"",
+      "method_channel_matches": true
+    },
+    {
+      "name": "echo_ascii",
+      "expected": "\"Hello\"",
+      "jnigen": "\"Hello\"",
+      "jnigen_matches": true,
+      "method_channel": "\"Hello\"",
+      "method_channel_matches": true
+    },
+    {
+      "name": "echo_unicode_bmp",
+      "expected": "\"\\u0928\\u092e\\u0938\\u094d\\u0924\\u0947 \\u0d2e\\u0d32\\u0d2f\\u0d3e\\u0d33\\u0d02 \\u4e2d\\u6587 \\u00f1\"",
+      "jnigen": "\"\\u0928\\u092e\\u0938\\u094d\\u0924\\u0947 \\u0d2e\\u0d32\\u0d2f\\u0d3e\\u0d33\\u0d02 \\u4e2d\\u6587 \\u00f1\"",
+      "jnigen_matches": true,
+      "method_channel": "\"\\u0928\\u092e\\u0938\\u094d\\u0924\\u0947 \\u0d2e\\u0d32\\u0d2f\\u0d3e\\u0d33\\u0d02 \\u4e2d\\u6587 \\u00f1\"",
+      "method_channel_matches": true
+    },
+    {
+      "name": "echo_emoji_surrogate_pairs",
+      "expected": "\"\\ud83d\\udc4b\\ud83c\\udffd\\ud83d\\ude80\"",
+      "jnigen": "\"\\ud83d\\udc4b\\ud83c\\udffd\\ud83d\\ude80\"",
+      "jnigen_matches": true,
+      "method_channel": "\"\\ud83d\\udc4b\\ud83c\\udffd\\ud83d\\ude80\"",
+      "method_channel_matches": true
+    },
+    {
+      "name": "echo_embedded_nul",
+      "expected": "\"a\\u0000b\"",
+      "jnigen": "\"a\\u0000b\"",
+      "jnigen_matches": true,
+      "method_channel": "\"a\\u0000b\"",
+      "method_channel_matches": true
+    },
+    {
+      "name": "echo_lone_surrogate",
+      "expected": "\"x\\ud800y\"",
+      "jnigen": "\"x\\ud800y\"",
+      "jnigen_matches": true,
+      "method_channel": "\"x\\ufffdy\"",
+      "method_channel_matches": false
+    },
+    {
+      "name": "echo_100k_chars",
+      "expected": "String(length: 100000, start: \"abcdefghijabcdef\")",
+      "jnigen": "String(length: 100000, start: \"abcdefghijabcdef\")",
+      "jnigen_matches": true,
+      "method_channel": "String(length: 100000, start: \"abcdefghijabcdef\")",
+      "method_channel_matches": true
+    }
+  ],
+  "results": [
+    {
+      "approach": "jnigen",
+      "operation": "noop",
+      "calls": 1,
+      "runs_ns": [
+        1302,
+        677,
+        677,
+        677,
+        678
+      ],
+      "median_total_ms": 0.000677,
+      "median_per_call_us": 0.677,
+      "min_total_ms": 0.000677,
+      "max_total_ms": 0.001302,
+      "mismatches": 0
+    },
+    {
+      "approach": "method_channel",
+      "operation": "noop",
+      "calls": 1,
+      "runs_ns": [
+        233854,
+        229271,
+        266407,
+        309948,
+        312917
+      ],
+      "median_total_ms": 0.266407,
+      "median_per_call_us": 266.407,
+      "min_total_ms": 0.229271,
+      "max_total_ms": 0.312917,
+      "mismatches": 0
+    },
+    {
+      "approach": "jnigen",
+      "operation": "add",
+      "calls": 1,
+      "runs_ns": [
+        2240,
+        833,
+        938,
+        729,
+        781
+      ],
+      "median_total_ms": 0.000833,
+      "median_per_call_us": 0.833,
+      "min_total_ms": 0.000729,
+      "max_total_ms": 0.00224,
+      "mismatches": 0
+    },
+    {
+      "approach": "method_channel",
+      "operation": "add",
+      "calls": 1,
+      "runs_ns": [
+        178646,
+        208541,
+        222448,
+        184844,
+        182657
+      ],
+      "median_total_ms": 0.184844,
+      "median_per_call_us": 184.844,
+      "min_total_ms": 0.178646,
+      "max_total_ms": 0.222448,
+      "mismatches": 0
+    },
+    {
+      "approach": "jnigen",
+      "operation": "echo",
+      "calls": 1,
+      "runs_ns": [
+        15469,
+        6511,
+        6250,
+        6250,
+        6146
+      ],
+      "median_total_ms": 0.00625,
+      "median_per_call_us": 6.25,
+      "min_total_ms": 0.006146,
+      "max_total_ms": 0.015469,
+      "mismatches": 0
+    },
+    {
+      "approach": "method_channel",
+      "operation": "echo",
+      "calls": 1,
+      "runs_ns": [
+        174011,
+        183698,
+        160261,
+        198802,
+        159687
+      ],
+      "median_total_ms": 0.174011,
+      "median_per_call_us": 174.011,
+      "min_total_ms": 0.159687,
+      "max_total_ms": 0.198802,
+      "mismatches": 0
+    },
+    {
+      "approach": "jnigen",
+      "operation": "noop",
+      "calls": 1000,
+      "runs_ns": [
+        479010,
+        559167,
+        478125,
+        479063,
+        477709
+      ],
+      "median_total_ms": 0.47901,
+      "median_per_call_us": 0.47901,
+      "min_total_ms": 0.477709,
+      "max_total_ms": 0.559167,
+      "mismatches": 0
+    },
+    {
+      "approach": "method_channel",
+      "operation": "noop",
+      "calls": 1000,
+      "runs_ns": [
+        156708802,
+        152761875,
+        154151875,
+        151691874,
+        155157552
+      ],
+      "median_total_ms": 154.151875,
+      "median_per_call_us": 154.151875,
+      "min_total_ms": 151.691874,
+      "max_total_ms": 156.708802,
+      "mismatches": 0
+    },
+    {
+      "approach": "jnigen",
+      "operation": "add",
+      "calls": 1000,
+      "runs_ns": [
+        590417,
+        593542,
+        590156,
+        590260,
+        651615
+      ],
+      "median_total_ms": 0.590417,
+      "median_per_call_us": 0.5904170000000001,
+      "min_total_ms": 0.590156,
+      "max_total_ms": 0.651615,
+      "mismatches": 0
+    },
+    {
+      "approach": "method_channel",
+      "operation": "add",
+      "calls": 1000,
+      "runs_ns": [
+        166338020,
+        165657084,
+        164420313,
+        168303125,
+        166646719
+      ],
+      "median_total_ms": 166.33802,
+      "median_per_call_us": 166.33802,
+      "min_total_ms": 164.420313,
+      "max_total_ms": 168.303125,
+      "mismatches": 0
+    },
+    {
+      "approach": "jnigen",
+      "operation": "echo",
+      "calls": 1000,
+      "runs_ns": [
+        6524844,
+        7847448,
+        7568854,
+        7248177,
+        6490417
+      ],
+      "median_total_ms": 7.248177,
+      "median_per_call_us": 7.248177,
+      "min_total_ms": 6.490417,
+      "max_total_ms": 7.847448,
+      "mismatches": 0
+    },
+    {
+      "approach": "method_channel",
+      "operation": "echo",
+      "calls": 1000,
+      "runs_ns": [
+        160188906,
+        161532916,
+        164133854,
+        160540885,
+        165013125
+      ],
+      "median_total_ms": 161.532916,
+      "median_per_call_us": 161.532916,
+      "min_total_ms": 160.188906,
+      "max_total_ms": 165.013125,
+      "mismatches": 0
+    },
+    {
+      "approach": "jnigen",
+      "operation": "noop",
+      "calls": 10000,
+      "runs_ns": [
+        4840573,
+        4909479,
+        4820000,
+        4786667,
+        5078594
+      ],
+      "median_total_ms": 4.840573,
+      "median_per_call_us": 0.4840573,
+      "min_total_ms": 4.786667,
+      "max_total_ms": 5.078594,
+      "mismatches": 0
+    },
+    {
+      "approach": "method_channel",
+      "operation": "noop",
+      "calls": 10000,
+      "runs_ns": [
+        1479447135,
+        1447249322,
+        1440147187,
+        1434206249,
+        1334881510
+      ],
+      "median_total_ms": 1440.147187,
+      "median_per_call_us": 144.0147187,
+      "min_total_ms": 1334.88151,
+      "max_total_ms": 1479.447135,
+      "mismatches": 0
+    },
+    {
+      "approach": "jnigen",
+      "operation": "add",
+      "calls": 10000,
+      "runs_ns": [
+        6442031,
+        5936875,
+        6263073,
+        5977343,
+        5965833
+      ],
+      "median_total_ms": 5.977343,
+      "median_per_call_us": 0.5977342999999999,
+      "min_total_ms": 5.936875,
+      "max_total_ms": 6.442031,
+      "mismatches": 0
+    },
+    {
+      "approach": "method_channel",
+      "operation": "add",
+      "calls": 10000,
+      "runs_ns": [
+        1480509375,
+        1499566562,
+        1468200781,
+        1476606874,
+        1453592499
+      ],
+      "median_total_ms": 1476.606874,
+      "median_per_call_us": 147.6606874,
+      "min_total_ms": 1453.592499,
+      "max_total_ms": 1499.566562,
+      "mismatches": 0
+    },
+    {
+      "approach": "jnigen",
+      "operation": "echo",
+      "calls": 10000,
+      "runs_ns": [
+        68863177,
+        68329948,
+        68944375,
+        69119948,
+        70817813
+      ],
+      "median_total_ms": 68.944375,
+      "median_per_call_us": 6.8944375,
+      "min_total_ms": 68.329948,
+      "max_total_ms": 70.817813,
+      "mismatches": 0
+    },
+    {
+      "approach": "method_channel",
+      "operation": "echo",
+      "calls": 10000,
+      "runs_ns": [
+        1437740885,
+        1482958853,
+        1694187291,
+        1483290312,
+        1386863437
+      ],
+      "median_total_ms": 1482.958853,
+      "median_per_call_us": 148.29588529999998,
+      "min_total_ms": 1386.863437,
+      "max_total_ms": 1694.187291,
+      "mismatches": 0
+    },
+    {
+      "approach": "jnigen",
+      "operation": "noop",
+      "calls": 100000,
+      "runs_ns": [
+        41099739,
+        40092917,
+        40613020,
+        40314375,
+        40689844
+      ],
+      "median_total_ms": 40.61302,
+      "median_per_call_us": 0.4061302,
+      "min_total_ms": 40.092917,
+      "max_total_ms": 41.099739,
+      "mismatches": 0
+    },
+    {
+      "approach": "method_channel",
+      "operation": "noop",
+      "calls": 100000,
+      "runs_ns": [
+        13478513016,
+        14290338536,
+        14656663901,
+        14315985724,
+        14250740464
+      ],
+      "median_total_ms": 14290.338536,
+      "median_per_call_us": 142.90338536,
+      "min_total_ms": 13478.513016,
+      "max_total_ms": 14656.663901,
+      "mismatches": 0
+    },
+    {
+      "approach": "jnigen",
+      "operation": "add",
+      "calls": 100000,
+      "runs_ns": [
+        57990104,
+        57410260,
+        57639218,
+        57285781,
+        57610677
+      ],
+      "median_total_ms": 57.610677,
+      "median_per_call_us": 0.57610677,
+      "min_total_ms": 57.285781,
+      "max_total_ms": 57.990104,
+      "mismatches": 0
+    },
+    {
+      "approach": "method_channel",
+      "operation": "add",
+      "calls": 100000,
+      "runs_ns": [
+        15922923535,
+        16045539786,
+        15974187494,
+        15949991504,
+        16194694213
+      ],
+      "median_total_ms": 15974.187494,
+      "median_per_call_us": 159.74187494,
+      "min_total_ms": 15922.923535,
+      "max_total_ms": 16194.694213,
+      "mismatches": 0
+    },
+    {
+      "approach": "jnigen",
+      "operation": "echo",
+      "calls": 100000,
+      "runs_ns": [
+        742027187,
+        742751978,
+        743905781,
+        750304062,
+        746397135
+      ],
+      "median_total_ms": 743.905781,
+      "median_per_call_us": 7.43905781,
+      "min_total_ms": 742.027187,
+      "max_total_ms": 750.304062,
+      "mismatches": 0
+    },
+    {
+      "approach": "method_channel",
+      "operation": "echo",
+      "calls": 100000,
+      "runs_ns": [
+        15637313224,
+        15496734421,
+        15472310619,
+        15688487390,
+        15607137078
+      ],
+      "median_total_ms": 15607.137078,
+      "median_per_call_us": 156.07137078,
+      "min_total_ms": 15472.310619,
+      "max_total_ms": 15688.48739,
+      "mismatches": 0
+    }
+  ]
+}

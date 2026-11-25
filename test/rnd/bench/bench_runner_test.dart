@@ -17,6 +17,21 @@ void main() {
     });
   });
 
+  group('ticksToNanoseconds', () {
+    test('long runs on a nanosecond clock do not overflow', () {
+      // 35 s at 1 GHz: the naive ticks * 1e9 would overflow int64.
+      expect(ticksToNanoseconds(35000000000, 1000000000), 35000000000);
+    });
+
+    test('microsecond clock converts exactly', () {
+      expect(ticksToNanoseconds(1500001, 1000000), 1500001000);
+    });
+
+    test('sub-tick remainder is kept', () {
+      expect(ticksToNanoseconds(7, 3), 2333333333);
+    });
+  });
+
   group('BenchRunner', () {
     const runner = BenchRunner(runs: 3, warmupCalls: 2);
 

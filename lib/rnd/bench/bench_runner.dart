@@ -77,6 +77,19 @@ int median(List<int> values) {
       : (sorted[middle - 1] + sorted[middle]) ~/ 2;
 }
 
+/// Converts stopwatch [ticks] at [frequency] ticks/second to nanoseconds
+/// without 64-bit overflow.
+///
+/// The naive `ticks * 1e9 ~/ frequency` overflows once `ticks` passes about
+/// 9.2e9, which on a nanosecond-resolution clock (Android) is any run longer
+/// than about 9.2 s. Splitting into whole seconds and the remainder keeps
+/// every intermediate value below 1e18.
+int ticksToNanoseconds(int ticks, int frequency) {
+  const nsPerSecond = 1000000000;
+  return (ticks ~/ frequency) * nsPerSecond +
+      (ticks % frequency) * nsPerSecond ~/ frequency;
+}
+
 class BenchRunner {
   const BenchRunner({this.runs = 5, this.warmupCalls = 1000});
 
@@ -84,7 +97,7 @@ class BenchRunner {
   final int warmupCalls;
 
   static int _elapsedNs(Stopwatch stopwatch) =>
-      stopwatch.elapsedTicks * 1000000000 ~/ stopwatch.frequency;
+      ticksToNanoseconds(stopwatch.elapsedTicks, stopwatch.frequency);
 
   /// Times a synchronous [call]. [call] gets the call index and returns
   /// whether its result was correct.
