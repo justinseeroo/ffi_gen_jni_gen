@@ -38,6 +38,1515 @@ import 'package:jni/jni.dart' as jni$_;
 
 const _$jniVersionCheck = jni$_.JniVersionCheck(1, 2);
 
+/// from: `com.example.ffi_gen_jni_gen.bench.Address`
+extension type Address._(jni$_.JObject _$this) implements jni$_.JObject {
+  static final _class = jni$_.JClass.forName(
+    r'com/example/ffi_gen_jni_gen/bench/Address',
+  );
+
+  /// The type which includes information such as the signature of this class.
+  static const jni$_.JType<Address> type = $Address$Type$();
+  static final _id_new$ = _class.constructorId(
+    r'(Ljava/lang/String;Ljava/lang/String;)V',
+  );
+
+  static final _new$ =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<
+                  (jni$_.Pointer<jni$_.Void>, jni$_.Pointer<jni$_.Void>)
+                >,
+              )
+            >
+          >('globalEnv_NewObject')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public void <init>(java.lang.String string, java.lang.String string1)`
+  /// The returned object must be released after use, by calling the [release] method.
+  factory Address(jni$_.JString string, jni$_.JString? string1) {
+    final _$$classRef = _class.reference;
+    final _$string = string.reference;
+    final _$string1 = string1?.reference ?? jni$_.jNullReference;
+    return _new$(
+      _$$classRef.pointer,
+      _id_new$.pointer,
+      _$string.pointer,
+      _$string1.pointer,
+    ).object<Address>();
+  }
+}
+
+extension Address$$Methods on Address {
+  static final _id_get$city = Address._class.instanceMethodId(
+    r'getCity',
+    r'()Ljava/lang/String;',
+  );
+
+  static final _get$city =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final java.lang.String getCity()`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JString get city {
+    final _$$selfRef = reference;
+    return _get$city(
+      _$$selfRef.nonNullPointer,
+      _id_get$city.pointer,
+    ).object<jni$_.JString>();
+  }
+
+  static final _id_get$postalCode = Address._class.instanceMethodId(
+    r'getPostalCode',
+    r'()Ljava/lang/String;',
+  );
+
+  static final _get$postalCode =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final java.lang.String getPostalCode()`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JString? get postalCode {
+    final _$$selfRef = reference;
+    return _get$postalCode(
+      _$$selfRef.nonNullPointer,
+      _id_get$postalCode.pointer,
+    ).object<jni$_.JString?>();
+  }
+
+  static final _id_component1 = Address._class.instanceMethodId(
+    r'component1',
+    r'()Ljava/lang/String;',
+  );
+
+  static final _component1 =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public operator fun component1(): kotlin.String`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JString component1() {
+    final _$$selfRef = reference;
+    return _component1(
+      _$$selfRef.nonNullPointer,
+      _id_component1.pointer,
+    ).object<jni$_.JString>();
+  }
+
+  static final _id_component2 = Address._class.instanceMethodId(
+    r'component2',
+    r'()Ljava/lang/String;',
+  );
+
+  static final _component2 =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public operator fun component2(): kotlin.String?`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JString? component2() {
+    final _$$selfRef = reference;
+    return _component2(
+      _$$selfRef.nonNullPointer,
+      _id_component2.pointer,
+    ).object<jni$_.JString?>();
+  }
+
+  static final _id_copy = Address._class.instanceMethodId(
+    r'copy',
+    r'(Ljava/lang/String;Ljava/lang/String;)Lcom/example/ffi_gen_jni_gen/bench/Address;',
+  );
+
+  static final _copy =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<
+                  (jni$_.Pointer<jni$_.Void>, jni$_.Pointer<jni$_.Void>)
+                >,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun copy(city: kotlin.String, postalCode: kotlin.String?): com.example.ffi_gen_jni_gen.bench.Address`
+  /// The returned object must be released after use, by calling the [release] method.
+  Address copy(jni$_.JString string, jni$_.JString? string1) {
+    final _$$selfRef = reference;
+    final _$string = string.reference;
+    final _$string1 = string1?.reference ?? jni$_.jNullReference;
+    return _copy(
+      _$$selfRef.nonNullPointer,
+      _id_copy.pointer,
+      _$string.pointer,
+      _$string1.pointer,
+    ).object<Address>();
+  }
+
+  static final _id_toString$1 = Address._class.instanceMethodId(
+    r'toString',
+    r'()Ljava/lang/String;',
+  );
+
+  static final _toString$1 =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public fun toString(): kotlin.String`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JString toString$1() {
+    final _$$selfRef = reference;
+    return _toString$1(
+      _$$selfRef.nonNullPointer,
+      _id_toString$1.pointer,
+    ).object<jni$_.JString>();
+  }
+
+  static final _id_hashCode$1 = Address._class.instanceMethodId(
+    r'hashCode',
+    r'()I',
+  );
+
+  static final _hashCode$1 =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallIntMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public fun hashCode(): kotlin.Int`
+  core$_.int hashCode$1() {
+    final _$$selfRef = reference;
+    return _hashCode$1(
+      _$$selfRef.nonNullPointer,
+      _id_hashCode$1.pointer,
+    ).integer;
+  }
+
+  static final _id_equals = Address._class.instanceMethodId(
+    r'equals',
+    r'(Ljava/lang/Object;)Z',
+  );
+
+  static final _equals =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>,)>,
+              )
+            >
+          >('globalEnv_CallBooleanMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public operator fun equals(other: kotlin.Any?): kotlin.Boolean`
+  core$_.bool equals(jni$_.JObject? object) {
+    final _$$selfRef = reference;
+    final _$object = object?.reference ?? jni$_.jNullReference;
+    return _equals(
+      _$$selfRef.nonNullPointer,
+      _id_equals.pointer,
+      _$object.pointer,
+    ).boolean;
+  }
+}
+
+final class $Address$Type$ extends jni$_.JType<Address> {
+  @jni$_.internal
+  const $Address$Type$();
+
+  @jni$_.internal
+  @core$_.override
+  String get signature => r'Lcom/example/ffi_gen_jni_gen/bench/Address;';
+
+  @jni$_.internal
+  @core$_.override
+  String get className => r'com/example/ffi_gen_jni_gen/bench/Address';
+}
+
+/// from: `com.example.ffi_gen_jni_gen.bench.AsyncBench`
+extension type AsyncBench._(jni$_.JObject _$this) implements jni$_.JObject {
+  static final _class = jni$_.JClass.forName(
+    r'com/example/ffi_gen_jni_gen/bench/AsyncBench',
+  );
+
+  /// The type which includes information such as the signature of this class.
+  static const jni$_.JType<AsyncBench> type = $AsyncBench$Type$();
+  static final _id_INSTANCE = _class.staticFieldId(
+    r'INSTANCE',
+    r'Lcom/example/ffi_gen_jni_gen/bench/AsyncBench;',
+  );
+
+  /// from: `static public final com.example.ffi_gen_jni_gen.bench.AsyncBench INSTANCE`
+  /// The returned object must be released after use, by calling the [release] method.
+  static AsyncBench get INSTANCE =>
+      _id_INSTANCE.get(_class, AsyncBench.type) as AsyncBench;
+
+  static final _id_threadName = _class.staticMethodId(
+    r'threadName',
+    r'()Ljava/lang/String;',
+  );
+
+  static final _threadName =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public fun threadName(): kotlin.String`
+  /// The returned object must be released after use, by calling the [release] method.
+  static jni$_.JString threadName() {
+    final _$$classRef = _class.reference;
+    return _threadName(
+      _$$classRef.pointer,
+      _id_threadName.pointer,
+    ).object<jni$_.JString>();
+  }
+
+  static final _id_get$isMainThread = _class.staticMethodId(
+    r'isMainThread',
+    r'()Z',
+  );
+
+  static final _get$isMainThread =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallStaticBooleanMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public fun isMainThread(): kotlin.Boolean`
+  static core$_.bool get isMainThread {
+    final _$$classRef = _class.reference;
+    return _get$isMainThread(
+      _$$classRef.pointer,
+      _id_get$isMainThread.pointer,
+    ).boolean;
+  }
+
+  static final _id_blockingWork = _class.staticMethodId(
+    r'blockingWork',
+    r'(I)Ljava/lang/String;',
+  );
+
+  static final _blockingWork =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int32,)>,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun blockingWork(millis: kotlin.Int): kotlin.String`
+  /// The returned object must be released after use, by calling the [release] method.
+  static jni$_.JString blockingWork(core$_.int i) {
+    final _$$classRef = _class.reference;
+    return _blockingWork(
+      _$$classRef.pointer,
+      _id_blockingWork.pointer,
+      i,
+    ).object<jni$_.JString>();
+  }
+
+  static final _id_suspendWork = _class.staticMethodId(
+    r'suspendWork',
+    r'(IILkotlin/coroutines/Continuation;)Ljava/lang/Object;',
+  );
+
+  static final _suspendWork =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<
+                  (jni$_.Int32, jni$_.Int32, jni$_.Pointer<jni$_.Void>)
+                >,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+              core$_.int,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public suspend fun suspendWork(requestId: kotlin.Int, millis: kotlin.Int): kotlin.String`
+  /// The returned object must be released after use, by calling the [release] method.
+  static core$_.Future<jni$_.JString> suspendWork(
+    core$_.int i,
+    core$_.int i1,
+  ) async {
+    final $p = jni$_.ReceivePort();
+    final _$continuation = jni$_.ProtectedJniExtensions.newPortContinuation($p);
+    final _$$classRef = _class.reference;
+    final $r = _suspendWork(
+      _$$classRef.pointer,
+      _id_suspendWork.pointer,
+      i,
+      i1,
+      _$continuation.pointer,
+    ).object<jni$_.JObject>();
+    _$continuation.release();
+    jni$_.JObject $o;
+    if ($r.isInstanceOf(jni$_.coroutineSingletonsClass)) {
+      $r.release();
+      final $a = await $p.first;
+      $o = jni$_.JObject.fromReference(
+        jni$_.JGlobalReference(jni$_.JObjectPtr.fromAddress($a)),
+      );
+      if ($o.isInstanceOf(jni$_.result$Class)) {
+        $o = jni$_.resultValueField.get($o, const jni$_.$JObject$Type$());
+      } else if ($o.isInstanceOf(jni$_.result$FailureClass)) {
+        final $e = jni$_.failureExceptionField.get(
+          $o,
+          const jni$_.$JObject$Type$(),
+        );
+        $o.release();
+        jni$_.Jni.throwException($e.reference.toPointer());
+      }
+    } else {
+      $o = $r;
+    }
+    return $o.as<jni$_.JString>(jni$_.JString.type, releaseOriginal: true);
+  }
+
+  static final _id_suspendFail = _class.staticMethodId(
+    r'suspendFail',
+    r'(Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;',
+  );
+
+  static final _suspendFail =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<
+                  (jni$_.Pointer<jni$_.Void>, jni$_.Pointer<jni$_.Void>)
+                >,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public suspend fun suspendFail(message: kotlin.String): kotlin.String`
+  /// The returned object must be released after use, by calling the [release] method.
+  static core$_.Future<jni$_.JString> suspendFail(jni$_.JString string) async {
+    final $p = jni$_.ReceivePort();
+    final _$continuation = jni$_.ProtectedJniExtensions.newPortContinuation($p);
+    final _$$classRef = _class.reference;
+    final _$string = string.reference;
+    final $r = _suspendFail(
+      _$$classRef.pointer,
+      _id_suspendFail.pointer,
+      _$string.pointer,
+      _$continuation.pointer,
+    ).object<jni$_.JObject>();
+    _$continuation.release();
+    jni$_.JObject $o;
+    if ($r.isInstanceOf(jni$_.coroutineSingletonsClass)) {
+      $r.release();
+      final $a = await $p.first;
+      $o = jni$_.JObject.fromReference(
+        jni$_.JGlobalReference(jni$_.JObjectPtr.fromAddress($a)),
+      );
+      if ($o.isInstanceOf(jni$_.result$Class)) {
+        $o = jni$_.resultValueField.get($o, const jni$_.$JObject$Type$());
+      } else if ($o.isInstanceOf(jni$_.result$FailureClass)) {
+        final $e = jni$_.failureExceptionField.get(
+          $o,
+          const jni$_.$JObject$Type$(),
+        );
+        $o.release();
+        jni$_.Jni.throwException($e.reference.toPointer());
+      }
+    } else {
+      $o = $r;
+    }
+    return $o.as<jni$_.JString>(jni$_.JString.type, releaseOriginal: true);
+  }
+
+  static final _id_startWork = _class.staticMethodId(
+    r'startWork',
+    r'(IIIZLcom/example/ffi_gen_jni_gen/bench/ProgressListener;)Lcom/example/ffi_gen_jni_gen/bench/WorkHandle;',
+  );
+
+  static final _startWork =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<
+                  (
+                    jni$_.Int32,
+                    jni$_.Int32,
+                    jni$_.Int32,
+                    jni$_.Int32,
+                    jni$_.Pointer<jni$_.Void>,
+                  )
+                >,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+              core$_.int,
+              core$_.int,
+              core$_.int,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun startWork(requestId: kotlin.Int, steps: kotlin.Int, stepMillis: kotlin.Int, honorCancel: kotlin.Boolean, listener: com.example.ffi_gen_jni_gen.bench.ProgressListener): com.example.ffi_gen_jni_gen.bench.WorkHandle`
+  /// The returned object must be released after use, by calling the [release] method.
+  static WorkHandle startWork(
+    core$_.int i,
+    core$_.int i1,
+    core$_.int i2,
+    core$_.bool z,
+    ProgressListener progressListener,
+  ) {
+    final _$$classRef = _class.reference;
+    final _$progressListener = progressListener.reference;
+    return _startWork(
+      _$$classRef.pointer,
+      _id_startWork.pointer,
+      i,
+      i1,
+      i2,
+      z ? 1 : 0,
+      _$progressListener.pointer,
+    ).object<WorkHandle>();
+  }
+
+  static final _id_startAskDart = _class.staticMethodId(
+    r'startAskDart',
+    r'(IIILcom/example/ffi_gen_jni_gen/bench/ValueProvider;Lcom/example/ffi_gen_jni_gen/bench/ProgressListener;)Lcom/example/ffi_gen_jni_gen/bench/WorkHandle;',
+  );
+
+  static final _startAskDart =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<
+                  (
+                    jni$_.Int32,
+                    jni$_.Int32,
+                    jni$_.Int32,
+                    jni$_.Pointer<jni$_.Void>,
+                    jni$_.Pointer<jni$_.Void>,
+                  )
+                >,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+              core$_.int,
+              core$_.int,
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun startAskDart(requestId: kotlin.Int, count: kotlin.Int, delayMillis: kotlin.Int, provider: com.example.ffi_gen_jni_gen.bench.ValueProvider, listener: com.example.ffi_gen_jni_gen.bench.ProgressListener): com.example.ffi_gen_jni_gen.bench.WorkHandle`
+  /// The returned object must be released after use, by calling the [release] method.
+  static WorkHandle startAskDart(
+    core$_.int i,
+    core$_.int i1,
+    core$_.int i2,
+    ValueProvider valueProvider,
+    ProgressListener progressListener,
+  ) {
+    final _$$classRef = _class.reference;
+    final _$valueProvider = valueProvider.reference;
+    final _$progressListener = progressListener.reference;
+    return _startAskDart(
+      _$$classRef.pointer,
+      _id_startAskDart.pointer,
+      i,
+      i1,
+      i2,
+      _$valueProvider.pointer,
+      _$progressListener.pointer,
+    ).object<WorkHandle>();
+  }
+
+  static final _id_status = _class.staticMethodId(
+    r'status',
+    r'(I)Ljava/lang/String;',
+  );
+
+  static final _status =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int32,)>,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun status(requestId: kotlin.Int): kotlin.String`
+  /// The returned object must be released after use, by calling the [release] method.
+  static jni$_.JString status(core$_.int i) {
+    final _$$classRef = _class.reference;
+    return _status(
+      _$$classRef.pointer,
+      _id_status.pointer,
+      i,
+    ).object<jni$_.JString>();
+  }
+
+  static final _id_callListenerOnCallingThread = _class.staticMethodId(
+    r'callListenerOnCallingThread',
+    r'(Lcom/example/ffi_gen_jni_gen/bench/ProgressListener;I)V',
+  );
+
+  static final _callListenerOnCallingThread =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JThrowablePtr Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>, jni$_.Int32)>,
+              )
+            >
+          >('globalEnv_CallStaticVoidMethod')
+          .asFunction<
+            jni$_.JThrowablePtr Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun callListenerOnCallingThread(listener: com.example.ffi_gen_jni_gen.bench.ProgressListener, count: kotlin.Int): kotlin.Unit`
+  static void callListenerOnCallingThread(
+    ProgressListener progressListener,
+    core$_.int i,
+  ) {
+    final _$$classRef = _class.reference;
+    final _$progressListener = progressListener.reference;
+    _callListenerOnCallingThread(
+      _$$classRef.pointer,
+      _id_callListenerOnCallingThread.pointer,
+      _$progressListener.pointer,
+      i,
+    ).check();
+  }
+
+  static final _id_askDartOnCallingThread = _class.staticMethodId(
+    r'askDartOnCallingThread',
+    r'(Lcom/example/ffi_gen_jni_gen/bench/ValueProvider;I)J',
+  );
+
+  static final _askDartOnCallingThread =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>, jni$_.Int32)>,
+              )
+            >
+          >('globalEnv_CallStaticLongMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun askDartOnCallingThread(provider: com.example.ffi_gen_jni_gen.bench.ValueProvider, count: kotlin.Int): kotlin.Long`
+  static core$_.int askDartOnCallingThread(
+    ValueProvider valueProvider,
+    core$_.int i,
+  ) {
+    final _$$classRef = _class.reference;
+    final _$valueProvider = valueProvider.reference;
+    return _askDartOnCallingThread(
+      _$$classRef.pointer,
+      _id_askDartOnCallingThread.pointer,
+      _$valueProvider.pointer,
+      i,
+    ).long;
+  }
+
+  static final _id_askDartFromWorkerAndWait = _class.staticMethodId(
+    r'askDartFromWorkerAndWait',
+    r'(Lcom/example/ffi_gen_jni_gen/bench/ValueProvider;I)Ljava/lang/String;',
+  );
+
+  static final _askDartFromWorkerAndWait =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>, jni$_.Int32)>,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun askDartFromWorkerAndWait(provider: com.example.ffi_gen_jni_gen.bench.ValueProvider, timeoutMillis: kotlin.Int): kotlin.String`
+  /// The returned object must be released after use, by calling the [release] method.
+  static jni$_.JString askDartFromWorkerAndWait(
+    ValueProvider valueProvider,
+    core$_.int i,
+  ) {
+    final _$$classRef = _class.reference;
+    final _$valueProvider = valueProvider.reference;
+    return _askDartFromWorkerAndWait(
+      _$$classRef.pointer,
+      _id_askDartFromWorkerAndWait.pointer,
+      _$valueProvider.pointer,
+      i,
+    ).object<jni$_.JString>();
+  }
+}
+
+final class $AsyncBench$Type$ extends jni$_.JType<AsyncBench> {
+  @jni$_.internal
+  const $AsyncBench$Type$();
+
+  @jni$_.internal
+  @core$_.override
+  String get signature => r'Lcom/example/ffi_gen_jni_gen/bench/AsyncBench;';
+
+  @jni$_.internal
+  @core$_.override
+  String get className => r'com/example/ffi_gen_jni_gen/bench/AsyncBench';
+}
+
+/// from: `com.example.ffi_gen_jni_gen.bench.DataBench`
+extension type DataBench._(jni$_.JObject _$this) implements jni$_.JObject {
+  static final _class = jni$_.JClass.forName(
+    r'com/example/ffi_gen_jni_gen/bench/DataBench',
+  );
+
+  /// The type which includes information such as the signature of this class.
+  static const jni$_.JType<DataBench> type = $DataBench$Type$();
+  static final _id_INSTANCE = _class.staticFieldId(
+    r'INSTANCE',
+    r'Lcom/example/ffi_gen_jni_gen/bench/DataBench;',
+  );
+
+  /// from: `static public final com.example.ffi_gen_jni_gen.bench.DataBench INSTANCE`
+  /// The returned object must be released after use, by calling the [release] method.
+  static DataBench get INSTANCE =>
+      _id_INSTANCE.get(_class, DataBench.type) as DataBench;
+
+  static final _id_echoLong = _class.staticMethodId(r'echoLong', r'(J)J');
+
+  static final _echoLong =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int64,)>,
+              )
+            >
+          >('globalEnv_CallStaticLongMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun echoLong(value: kotlin.Long): kotlin.Long`
+  static core$_.int echoLong(core$_.int j) {
+    final _$$classRef = _class.reference;
+    return _echoLong(_$$classRef.pointer, _id_echoLong.pointer, j).long;
+  }
+
+  static final _id_echoDoubles = _class.staticMethodId(
+    r'echoDoubles',
+    r'([D)[D',
+  );
+
+  static final _echoDoubles =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>,)>,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun echoDoubles(values: kotlin.DoubleArray): kotlin.DoubleArray`
+  /// The returned object must be released after use, by calling the [release] method.
+  static jni$_.JDoubleArray echoDoubles(jni$_.JDoubleArray ds) {
+    final _$$classRef = _class.reference;
+    final _$ds = ds.reference;
+    return _echoDoubles(
+      _$$classRef.pointer,
+      _id_echoDoubles.pointer,
+      _$ds.pointer,
+    ).object<jni$_.JDoubleArray>();
+  }
+
+  static final _id_echoNullableString = _class.staticMethodId(
+    r'echoNullableString',
+    r'(Ljava/lang/String;)Ljava/lang/String;',
+  );
+
+  static final _echoNullableString =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>,)>,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun echoNullableString(value: kotlin.String?): kotlin.String?`
+  /// The returned object must be released after use, by calling the [release] method.
+  static jni$_.JString? echoNullableString(jni$_.JString? string) {
+    final _$$classRef = _class.reference;
+    final _$string = string?.reference ?? jni$_.jNullReference;
+    return _echoNullableString(
+      _$$classRef.pointer,
+      _id_echoNullableString.pointer,
+      _$string.pointer,
+    ).object<jni$_.JString?>();
+  }
+
+  static final _id_fingerprint = _class.staticMethodId(
+    r'fingerprint',
+    r'(Lcom/example/ffi_gen_jni_gen/bench/Profile;)Ljava/lang/String;',
+  );
+
+  static final _fingerprint =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>,)>,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun fingerprint(p: com.example.ffi_gen_jni_gen.bench.Profile): kotlin.String`
+  /// The returned object must be released after use, by calling the [release] method.
+  static jni$_.JString fingerprint(Profile profile) {
+    final _$$classRef = _class.reference;
+    final _$profile = profile.reference;
+    return _fingerprint(
+      _$$classRef.pointer,
+      _id_fingerprint.pointer,
+      _$profile.pointer,
+    ).object<jni$_.JString>();
+  }
+
+  static final _id_makeProfile = _class.staticMethodId(
+    r'makeProfile',
+    r'(I)Lcom/example/ffi_gen_jni_gen/bench/Profile;',
+  );
+
+  static final _makeProfile =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int32,)>,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun makeProfile(i: kotlin.Int): com.example.ffi_gen_jni_gen.bench.Profile`
+  /// The returned object must be released after use, by calling the [release] method.
+  static Profile makeProfile(core$_.int i) {
+    final _$$classRef = _class.reference;
+    return _makeProfile(
+      _$$classRef.pointer,
+      _id_makeProfile.pointer,
+      i,
+    ).object<Profile>();
+  }
+
+  static final _id_makeProfiles = _class.staticMethodId(
+    r'makeProfiles',
+    r'(I)Ljava/util/List;',
+  );
+
+  static final _makeProfiles =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int32,)>,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun makeProfiles(count: kotlin.Int): kotlin.collections.List<com.example.ffi_gen_jni_gen.bench.Profile>`
+  /// The returned object must be released after use, by calling the [release] method.
+  static jni$_.JList<Profile> makeProfiles(core$_.int i) {
+    final _$$classRef = _class.reference;
+    return _makeProfiles(
+      _$$classRef.pointer,
+      _id_makeProfiles.pointer,
+      i,
+    ).object<jni$_.JList<Profile>>();
+  }
+
+  static final _id_echoProfile = _class.staticMethodId(
+    r'echoProfile',
+    r'(Lcom/example/ffi_gen_jni_gen/bench/Profile;)Lcom/example/ffi_gen_jni_gen/bench/Profile;',
+  );
+
+  static final _echoProfile =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>,)>,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun echoProfile(p: com.example.ffi_gen_jni_gen.bench.Profile): com.example.ffi_gen_jni_gen.bench.Profile`
+  /// The returned object must be released after use, by calling the [release] method.
+  static Profile echoProfile(Profile profile) {
+    final _$$classRef = _class.reference;
+    final _$profile = profile.reference;
+    return _echoProfile(
+      _$$classRef.pointer,
+      _id_echoProfile.pointer,
+      _$profile.pointer,
+    ).object<Profile>();
+  }
+
+  static final _id_byteCount = _class.staticMethodId(r'byteCount', r'([B)I');
+
+  static final _byteCount =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>,)>,
+              )
+            >
+          >('globalEnv_CallStaticIntMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun byteCount(bytes: kotlin.ByteArray): kotlin.Int`
+  static core$_.int byteCount(jni$_.JByteArray bs) {
+    final _$$classRef = _class.reference;
+    final _$bs = bs.reference;
+    return _byteCount(
+      _$$classRef.pointer,
+      _id_byteCount.pointer,
+      _$bs.pointer,
+    ).integer;
+  }
+
+  static final _id_checksum = _class.staticMethodId(r'checksum', r'([B)J');
+
+  static final _checksum =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>,)>,
+              )
+            >
+          >('globalEnv_CallStaticLongMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun checksum(bytes: kotlin.ByteArray): kotlin.Long`
+  static core$_.int checksum(jni$_.JByteArray bs) {
+    final _$$classRef = _class.reference;
+    final _$bs = bs.reference;
+    return _checksum(
+      _$$classRef.pointer,
+      _id_checksum.pointer,
+      _$bs.pointer,
+    ).long;
+  }
+
+  static final _id_makeBytes = _class.staticMethodId(r'makeBytes', r'(I)[B');
+
+  static final _makeBytes =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int32,)>,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun makeBytes(size: kotlin.Int): kotlin.ByteArray`
+  /// The returned object must be released after use, by calling the [release] method.
+  static jni$_.JByteArray makeBytes(core$_.int i) {
+    final _$$classRef = _class.reference;
+    return _makeBytes(
+      _$$classRef.pointer,
+      _id_makeBytes.pointer,
+      i,
+    ).object<jni$_.JByteArray>();
+  }
+
+  static final _id_directByteCount = _class.staticMethodId(
+    r'directByteCount',
+    r'(Ljava/nio/ByteBuffer;)I',
+  );
+
+  static final _directByteCount =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>,)>,
+              )
+            >
+          >('globalEnv_CallStaticIntMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun directByteCount(buffer: java.nio.ByteBuffer): kotlin.Int`
+  static core$_.int directByteCount(jni$_.JByteBuffer byteBuffer) {
+    final _$$classRef = _class.reference;
+    final _$byteBuffer = byteBuffer.reference;
+    return _directByteCount(
+      _$$classRef.pointer,
+      _id_directByteCount.pointer,
+      _$byteBuffer.pointer,
+    ).integer;
+  }
+
+  static final _id_directChecksum = _class.staticMethodId(
+    r'directChecksum',
+    r'(Ljava/nio/ByteBuffer;)J',
+  );
+
+  static final _directChecksum =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>,)>,
+              )
+            >
+          >('globalEnv_CallStaticLongMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun directChecksum(buffer: java.nio.ByteBuffer): kotlin.Long`
+  static core$_.int directChecksum(jni$_.JByteBuffer byteBuffer) {
+    final _$$classRef = _class.reference;
+    final _$byteBuffer = byteBuffer.reference;
+    return _directChecksum(
+      _$$classRef.pointer,
+      _id_directChecksum.pointer,
+      _$byteBuffer.pointer,
+    ).long;
+  }
+
+  static final _id_makeDirectBytes = _class.staticMethodId(
+    r'makeDirectBytes',
+    r'(I)Ljava/nio/ByteBuffer;',
+  );
+
+  static final _makeDirectBytes =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int32,)>,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun makeDirectBytes(size: kotlin.Int): java.nio.ByteBuffer`
+  /// The returned object must be released after use, by calling the [release] method.
+  static jni$_.JByteBuffer makeDirectBytes(core$_.int i) {
+    final _$$classRef = _class.reference;
+    return _makeDirectBytes(
+      _$$classRef.pointer,
+      _id_makeDirectBytes.pointer,
+      i,
+    ).object<jni$_.JByteBuffer>();
+  }
+
+  static final _id_makeBytesNativeOnly = _class.staticMethodId(
+    r'makeBytesNativeOnly',
+    r'(I)I',
+  );
+
+  static final _makeBytesNativeOnly =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int32,)>,
+              )
+            >
+          >('globalEnv_CallStaticIntMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun makeBytesNativeOnly(size: kotlin.Int): kotlin.Int`
+  static core$_.int makeBytesNativeOnly(core$_.int i) {
+    final _$$classRef = _class.reference;
+    return _makeBytesNativeOnly(
+      _$$classRef.pointer,
+      _id_makeBytesNativeOnly.pointer,
+      i,
+    ).integer;
+  }
+
+  static final _id_makeDirectBytesNativeOnly = _class.staticMethodId(
+    r'makeDirectBytesNativeOnly',
+    r'(I)I',
+  );
+
+  static final _makeDirectBytesNativeOnly =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int32,)>,
+              )
+            >
+          >('globalEnv_CallStaticIntMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun makeDirectBytesNativeOnly(size: kotlin.Int): kotlin.Int`
+  static core$_.int makeDirectBytesNativeOnly(core$_.int i) {
+    final _$$classRef = _class.reference;
+    return _makeDirectBytesNativeOnly(
+      _$$classRef.pointer,
+      _id_makeDirectBytesNativeOnly.pointer,
+      i,
+    ).integer;
+  }
+
+  static final _id_sumIntArray = _class.staticMethodId(
+    r'sumIntArray',
+    r'([I)J',
+  );
+
+  static final _sumIntArray =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>,)>,
+              )
+            >
+          >('globalEnv_CallStaticLongMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun sumIntArray(values: kotlin.IntArray): kotlin.Long`
+  static core$_.int sumIntArray(jni$_.JIntArray is$) {
+    final _$$classRef = _class.reference;
+    final _$is$ = is$.reference;
+    return _sumIntArray(
+      _$$classRef.pointer,
+      _id_sumIntArray.pointer,
+      _$is$.pointer,
+    ).long;
+  }
+
+  static final _id_makeIntArray = _class.staticMethodId(
+    r'makeIntArray',
+    r'(I)[I',
+  );
+
+  static final _makeIntArray =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int32,)>,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun makeIntArray(count: kotlin.Int): kotlin.IntArray`
+  /// The returned object must be released after use, by calling the [release] method.
+  static jni$_.JIntArray makeIntArray(core$_.int i) {
+    final _$$classRef = _class.reference;
+    return _makeIntArray(
+      _$$classRef.pointer,
+      _id_makeIntArray.pointer,
+      i,
+    ).object<jni$_.JIntArray>();
+  }
+
+  static final _id_sumIntList = _class.staticMethodId(
+    r'sumIntList',
+    r'(Ljava/util/List;)J',
+  );
+
+  static final _sumIntList =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>,)>,
+              )
+            >
+          >('globalEnv_CallStaticLongMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun sumIntList(values: kotlin.collections.List<kotlin.Int>): kotlin.Long`
+  static core$_.int sumIntList(jni$_.JList<jni$_.JInteger> list) {
+    final _$$classRef = _class.reference;
+    final _$list = list.reference;
+    return _sumIntList(
+      _$$classRef.pointer,
+      _id_sumIntList.pointer,
+      _$list.pointer,
+    ).long;
+  }
+
+  static final _id_makeIntList = _class.staticMethodId(
+    r'makeIntList',
+    r'(I)Ljava/util/List;',
+  );
+
+  static final _makeIntList =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int32,)>,
+              )
+            >
+          >('globalEnv_CallStaticObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun makeIntList(count: kotlin.Int): kotlin.collections.List<kotlin.Int>`
+  /// The returned object must be released after use, by calling the [release] method.
+  static jni$_.JList<jni$_.JInteger> makeIntList(core$_.int i) {
+    final _$$classRef = _class.reference;
+    return _makeIntList(
+      _$$classRef.pointer,
+      _id_makeIntList.pointer,
+      i,
+    ).object<jni$_.JList<jni$_.JInteger>>();
+  }
+}
+
+final class $DataBench$Type$ extends jni$_.JType<DataBench> {
+  @jni$_.internal
+  const $DataBench$Type$();
+
+  @jni$_.internal
+  @core$_.override
+  String get signature => r'Lcom/example/ffi_gen_jni_gen/bench/DataBench;';
+
+  @jni$_.internal
+  @core$_.override
+  String get className => r'com/example/ffi_gen_jni_gen/bench/DataBench';
+}
+
 /// from: `com.example.ffi_gen_jni_gen.bench.InteropBench`
 extension type InteropBench._(jni$_.JObject _$this) implements jni$_.JObject {
   static final _class = jni$_.JClass.forName(
@@ -154,4 +1663,1457 @@ final class $InteropBench$Type$ extends jni$_.JType<InteropBench> {
   @jni$_.internal
   @core$_.override
   String get className => r'com/example/ffi_gen_jni_gen/bench/InteropBench';
+}
+
+/// from: `com.example.ffi_gen_jni_gen.bench.Profile`
+extension type Profile._(jni$_.JObject _$this) implements jni$_.JObject {
+  static final _class = jni$_.JClass.forName(
+    r'com/example/ffi_gen_jni_gen/bench/Profile',
+  );
+
+  /// The type which includes information such as the signature of this class.
+  static const jni$_.JType<Profile> type = $Profile$Type$();
+  static final _id_new$ = _class.constructorId(
+    r'(JLjava/lang/String;DZLjava/util/List;Ljava/lang/String;Lcom/example/ffi_gen_jni_gen/bench/Address;)V',
+  );
+
+  static final _new$ =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<
+                  (
+                    jni$_.Int64,
+                    jni$_.Pointer<jni$_.Void>,
+                    jni$_.Double,
+                    jni$_.Int32,
+                    jni$_.Pointer<jni$_.Void>,
+                    jni$_.Pointer<jni$_.Void>,
+                    jni$_.Pointer<jni$_.Void>,
+                  )
+                >,
+              )
+            >
+          >('globalEnv_NewObject')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+              jni$_.Pointer<jni$_.Void>,
+              core$_.double,
+              core$_.int,
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public void <init>(long j, java.lang.String string, double d, boolean z, java.util.List<java.lang.String> list, java.lang.String string1, com.example.ffi_gen_jni_gen.bench.Address address)`
+  /// The returned object must be released after use, by calling the [release] method.
+  factory Profile(
+    core$_.int j,
+    jni$_.JString string,
+    core$_.double d,
+    core$_.bool z,
+    jni$_.JList<jni$_.JString> list,
+    jni$_.JString? string1,
+    Address? address,
+  ) {
+    final _$$classRef = _class.reference;
+    final _$string = string.reference;
+    final _$list = list.reference;
+    final _$string1 = string1?.reference ?? jni$_.jNullReference;
+    final _$address = address?.reference ?? jni$_.jNullReference;
+    return _new$(
+      _$$classRef.pointer,
+      _id_new$.pointer,
+      j,
+      _$string.pointer,
+      d,
+      z ? 1 : 0,
+      _$list.pointer,
+      _$string1.pointer,
+      _$address.pointer,
+    ).object<Profile>();
+  }
+}
+
+extension Profile$$Methods on Profile {
+  static final _id_get$id = Profile._class.instanceMethodId(r'getId', r'()J');
+
+  static final _get$id =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallLongMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final long getId()`
+  core$_.int get id {
+    final _$$selfRef = reference;
+    return _get$id(_$$selfRef.nonNullPointer, _id_get$id.pointer).long;
+  }
+
+  static final _id_get$name = Profile._class.instanceMethodId(
+    r'getName',
+    r'()Ljava/lang/String;',
+  );
+
+  static final _get$name =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final java.lang.String getName()`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JString get name {
+    final _$$selfRef = reference;
+    return _get$name(
+      _$$selfRef.nonNullPointer,
+      _id_get$name.pointer,
+    ).object<jni$_.JString>();
+  }
+
+  static final _id_get$score = Profile._class.instanceMethodId(
+    r'getScore',
+    r'()D',
+  );
+
+  static final _get$score =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallDoubleMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final double getScore()`
+  core$_.double get score {
+    final _$$selfRef = reference;
+    return _get$score(
+      _$$selfRef.nonNullPointer,
+      _id_get$score.pointer,
+    ).doubleFloat;
+  }
+
+  static final _id_get$active = Profile._class.instanceMethodId(
+    r'getActive',
+    r'()Z',
+  );
+
+  static final _get$active =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallBooleanMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final boolean getActive()`
+  core$_.bool get active {
+    final _$$selfRef = reference;
+    return _get$active(
+      _$$selfRef.nonNullPointer,
+      _id_get$active.pointer,
+    ).boolean;
+  }
+
+  static final _id_get$tags = Profile._class.instanceMethodId(
+    r'getTags',
+    r'()Ljava/util/List;',
+  );
+
+  static final _get$tags =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final java.util.List<java.lang.String> getTags()`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JList<jni$_.JString> get tags {
+    final _$$selfRef = reference;
+    return _get$tags(
+      _$$selfRef.nonNullPointer,
+      _id_get$tags.pointer,
+    ).object<jni$_.JList<jni$_.JString>>();
+  }
+
+  static final _id_get$email = Profile._class.instanceMethodId(
+    r'getEmail',
+    r'()Ljava/lang/String;',
+  );
+
+  static final _get$email =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final java.lang.String getEmail()`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JString? get email {
+    final _$$selfRef = reference;
+    return _get$email(
+      _$$selfRef.nonNullPointer,
+      _id_get$email.pointer,
+    ).object<jni$_.JString?>();
+  }
+
+  static final _id_get$address = Profile._class.instanceMethodId(
+    r'getAddress',
+    r'()Lcom/example/ffi_gen_jni_gen/bench/Address;',
+  );
+
+  static final _get$address =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final com.example.ffi_gen_jni_gen.bench.Address getAddress()`
+  /// The returned object must be released after use, by calling the [release] method.
+  Address? get address {
+    final _$$selfRef = reference;
+    return _get$address(
+      _$$selfRef.nonNullPointer,
+      _id_get$address.pointer,
+    ).object<Address?>();
+  }
+
+  static final _id_component1 = Profile._class.instanceMethodId(
+    r'component1',
+    r'()J',
+  );
+
+  static final _component1 =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallLongMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public operator fun component1(): kotlin.Long`
+  core$_.int component1() {
+    final _$$selfRef = reference;
+    return _component1(_$$selfRef.nonNullPointer, _id_component1.pointer).long;
+  }
+
+  static final _id_component2 = Profile._class.instanceMethodId(
+    r'component2',
+    r'()Ljava/lang/String;',
+  );
+
+  static final _component2 =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public operator fun component2(): kotlin.String`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JString component2() {
+    final _$$selfRef = reference;
+    return _component2(
+      _$$selfRef.nonNullPointer,
+      _id_component2.pointer,
+    ).object<jni$_.JString>();
+  }
+
+  static final _id_component3 = Profile._class.instanceMethodId(
+    r'component3',
+    r'()D',
+  );
+
+  static final _component3 =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallDoubleMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public operator fun component3(): kotlin.Double`
+  core$_.double component3() {
+    final _$$selfRef = reference;
+    return _component3(
+      _$$selfRef.nonNullPointer,
+      _id_component3.pointer,
+    ).doubleFloat;
+  }
+
+  static final _id_component4 = Profile._class.instanceMethodId(
+    r'component4',
+    r'()Z',
+  );
+
+  static final _component4 =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallBooleanMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public operator fun component4(): kotlin.Boolean`
+  core$_.bool component4() {
+    final _$$selfRef = reference;
+    return _component4(
+      _$$selfRef.nonNullPointer,
+      _id_component4.pointer,
+    ).boolean;
+  }
+
+  static final _id_component5 = Profile._class.instanceMethodId(
+    r'component5',
+    r'()Ljava/util/List;',
+  );
+
+  static final _component5 =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public operator fun component5(): kotlin.collections.List<kotlin.String>`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JList<jni$_.JString> component5() {
+    final _$$selfRef = reference;
+    return _component5(
+      _$$selfRef.nonNullPointer,
+      _id_component5.pointer,
+    ).object<jni$_.JList<jni$_.JString>>();
+  }
+
+  static final _id_component6 = Profile._class.instanceMethodId(
+    r'component6',
+    r'()Ljava/lang/String;',
+  );
+
+  static final _component6 =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public operator fun component6(): kotlin.String?`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JString? component6() {
+    final _$$selfRef = reference;
+    return _component6(
+      _$$selfRef.nonNullPointer,
+      _id_component6.pointer,
+    ).object<jni$_.JString?>();
+  }
+
+  static final _id_component7 = Profile._class.instanceMethodId(
+    r'component7',
+    r'()Lcom/example/ffi_gen_jni_gen/bench/Address;',
+  );
+
+  static final _component7 =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public operator fun component7(): com.example.ffi_gen_jni_gen.bench.Address?`
+  /// The returned object must be released after use, by calling the [release] method.
+  Address? component7() {
+    final _$$selfRef = reference;
+    return _component7(
+      _$$selfRef.nonNullPointer,
+      _id_component7.pointer,
+    ).object<Address?>();
+  }
+
+  static final _id_copy = Profile._class.instanceMethodId(
+    r'copy',
+    r'(JLjava/lang/String;DZLjava/util/List;Ljava/lang/String;Lcom/example/ffi_gen_jni_gen/bench/Address;)Lcom/example/ffi_gen_jni_gen/bench/Profile;',
+  );
+
+  static final _copy =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<
+                  (
+                    jni$_.Int64,
+                    jni$_.Pointer<jni$_.Void>,
+                    jni$_.Double,
+                    jni$_.Int32,
+                    jni$_.Pointer<jni$_.Void>,
+                    jni$_.Pointer<jni$_.Void>,
+                    jni$_.Pointer<jni$_.Void>,
+                  )
+                >,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+              jni$_.Pointer<jni$_.Void>,
+              core$_.double,
+              core$_.int,
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun copy(id: kotlin.Long, name: kotlin.String, score: kotlin.Double, active: kotlin.Boolean, tags: kotlin.collections.List<kotlin.String>, email: kotlin.String?, address: com.example.ffi_gen_jni_gen.bench.Address?): com.example.ffi_gen_jni_gen.bench.Profile`
+  /// The returned object must be released after use, by calling the [release] method.
+  Profile copy(
+    core$_.int j,
+    jni$_.JString string,
+    core$_.double d,
+    core$_.bool z,
+    jni$_.JList<jni$_.JString> list,
+    jni$_.JString? string1,
+    Address? address,
+  ) {
+    final _$$selfRef = reference;
+    final _$string = string.reference;
+    final _$list = list.reference;
+    final _$string1 = string1?.reference ?? jni$_.jNullReference;
+    final _$address = address?.reference ?? jni$_.jNullReference;
+    return _copy(
+      _$$selfRef.nonNullPointer,
+      _id_copy.pointer,
+      j,
+      _$string.pointer,
+      d,
+      z ? 1 : 0,
+      _$list.pointer,
+      _$string1.pointer,
+      _$address.pointer,
+    ).object<Profile>();
+  }
+
+  static final _id_toString$1 = Profile._class.instanceMethodId(
+    r'toString',
+    r'()Ljava/lang/String;',
+  );
+
+  static final _toString$1 =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public fun toString(): kotlin.String`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JString toString$1() {
+    final _$$selfRef = reference;
+    return _toString$1(
+      _$$selfRef.nonNullPointer,
+      _id_toString$1.pointer,
+    ).object<jni$_.JString>();
+  }
+
+  static final _id_hashCode$1 = Profile._class.instanceMethodId(
+    r'hashCode',
+    r'()I',
+  );
+
+  static final _hashCode$1 =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallIntMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public fun hashCode(): kotlin.Int`
+  core$_.int hashCode$1() {
+    final _$$selfRef = reference;
+    return _hashCode$1(
+      _$$selfRef.nonNullPointer,
+      _id_hashCode$1.pointer,
+    ).integer;
+  }
+
+  static final _id_equals = Profile._class.instanceMethodId(
+    r'equals',
+    r'(Ljava/lang/Object;)Z',
+  );
+
+  static final _equals =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>,)>,
+              )
+            >
+          >('globalEnv_CallBooleanMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public operator fun equals(other: kotlin.Any?): kotlin.Boolean`
+  core$_.bool equals(jni$_.JObject? object) {
+    final _$$selfRef = reference;
+    final _$object = object?.reference ?? jni$_.jNullReference;
+    return _equals(
+      _$$selfRef.nonNullPointer,
+      _id_equals.pointer,
+      _$object.pointer,
+    ).boolean;
+  }
+}
+
+final class $Profile$Type$ extends jni$_.JType<Profile> {
+  @jni$_.internal
+  const $Profile$Type$();
+
+  @jni$_.internal
+  @core$_.override
+  String get signature => r'Lcom/example/ffi_gen_jni_gen/bench/Profile;';
+
+  @jni$_.internal
+  @core$_.override
+  String get className => r'com/example/ffi_gen_jni_gen/bench/Profile';
+}
+
+/// from: `com.example.ffi_gen_jni_gen.bench.ProgressListener`
+extension type ProgressListener._(jni$_.JObject _$this)
+    implements jni$_.JObject {
+  static final _class = jni$_.JClass.forName(
+    r'com/example/ffi_gen_jni_gen/bench/ProgressListener',
+  );
+
+  /// The type which includes information such as the signature of this class.
+  static const jni$_.JType<ProgressListener> type = $ProgressListener$Type$();
+
+  /// Maps a specific port to the implemented interface.
+  static final core$_.Map<core$_.int, $ProgressListener> _$impls = {};
+  static jni$_.JObjectPtr _$invoke(
+    core$_.int port,
+    jni$_.JObjectPtr descriptor,
+    jni$_.JObjectPtr args,
+  ) {
+    return _$invokeMethod(
+      port,
+      jni$_.MethodInvocation.fromAddresses(0, descriptor.address, args.address),
+    );
+  }
+
+  static final jni$_.Pointer<
+    jni$_.NativeFunction<
+      jni$_.JObjectPtr Function(jni$_.Int64, jni$_.JObjectPtr, jni$_.JObjectPtr)
+    >
+  >
+  _$invokePointer = jni$_.Pointer.fromFunction(_$invoke);
+
+  static jni$_.Pointer<jni$_.Void> _$invokeMethod(
+    core$_.int $p,
+    jni$_.MethodInvocation $i,
+  ) {
+    try {
+      final $d = $i.methodDescriptor.toDartString(releaseOriginal: true);
+      final $a = $i.args;
+      if ($d == r'onProgress(IILjava/lang/String;)V') {
+        _$impls[$p]!.onProgress(
+          ($a![0] as jni$_.JInteger).toDartInt(releaseOriginal: true),
+          ($a![1] as jni$_.JInteger).toDartInt(releaseOriginal: true),
+          ($a![2] as jni$_.JString),
+        );
+        return jni$_.nullptr;
+      }
+      if ($d == r'onComplete(IJLjava/lang/String;)V') {
+        _$impls[$p]!.onComplete(
+          ($a![0] as jni$_.JInteger).toDartInt(releaseOriginal: true),
+          ($a![1] as jni$_.JLong).toDartInt(releaseOriginal: true),
+          ($a![2] as jni$_.JString),
+        );
+        return jni$_.nullptr;
+      }
+    } catch (e) {
+      return jni$_.ProtectedJniExtensions.newDartException(e);
+    }
+    return jni$_.nullptr;
+  }
+
+  static void implementIn(
+    jni$_.JImplementer implementer,
+    $ProgressListener $impl,
+  ) {
+    late final jni$_.RawReceivePort $p;
+    $p = jni$_.RawReceivePort(($m) {
+      if ($m == null) {
+        _$impls.remove($p.sendPort.nativePort);
+        $p.close();
+        return;
+      }
+      final $i = jni$_.MethodInvocation.fromMessage($m);
+      final $r = _$invokeMethod($p.sendPort.nativePort, $i);
+      $i.args?.release();
+      jni$_.ProtectedJniExtensions.returnResult($i.result, $r);
+    });
+    implementer.add(
+      r'com.example.ffi_gen_jni_gen.bench.ProgressListener',
+      $p,
+      _$invokePointer,
+      [
+        if ($impl.onProgress$async) r'onProgress(IILjava/lang/String;)V',
+        if ($impl.onComplete$async) r'onComplete(IJLjava/lang/String;)V',
+      ],
+    );
+    final $a = $p.sendPort.nativePort;
+    _$impls[$a] = $impl;
+  }
+
+  factory ProgressListener.implement($ProgressListener $impl) {
+    final $i = jni$_.JImplementer();
+    implementIn($i, $impl);
+    return $i.implement<ProgressListener>();
+  }
+}
+
+extension ProgressListener$$Methods on ProgressListener {
+  static final _id_onProgress = ProgressListener._class.instanceMethodId(
+    r'onProgress',
+    r'(IILjava/lang/String;)V',
+  );
+
+  static final _onProgress =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JThrowablePtr Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<
+                  (jni$_.Int32, jni$_.Int32, jni$_.Pointer<jni$_.Void>)
+                >,
+              )
+            >
+          >('globalEnv_CallVoidMethod')
+          .asFunction<
+            jni$_.JThrowablePtr Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+              core$_.int,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun onProgress(requestId: kotlin.Int, step: kotlin.Int, threadName: kotlin.String): kotlin.Unit`
+  void onProgress(core$_.int i, core$_.int i1, jni$_.JString string) {
+    final _$$selfRef = reference;
+    final _$string = string.reference;
+    _onProgress(
+      _$$selfRef.nonNullPointer,
+      _id_onProgress.pointer,
+      i,
+      i1,
+      _$string.pointer,
+    ).check();
+  }
+
+  static final _id_onComplete = ProgressListener._class.instanceMethodId(
+    r'onComplete',
+    r'(IJLjava/lang/String;)V',
+  );
+
+  static final _onComplete =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JThrowablePtr Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<
+                  (jni$_.Int32, jni$_.Int64, jni$_.Pointer<jni$_.Void>)
+                >,
+              )
+            >
+          >('globalEnv_CallVoidMethod')
+          .asFunction<
+            jni$_.JThrowablePtr Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+              core$_.int,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public fun onComplete(requestId: kotlin.Int, result: kotlin.Long, threadName: kotlin.String): kotlin.Unit`
+  void onComplete(core$_.int i, core$_.int j, jni$_.JString string) {
+    final _$$selfRef = reference;
+    final _$string = string.reference;
+    _onComplete(
+      _$$selfRef.nonNullPointer,
+      _id_onComplete.pointer,
+      i,
+      j,
+      _$string.pointer,
+    ).check();
+  }
+}
+
+abstract base mixin class $ProgressListener {
+  factory $ProgressListener({
+    required void Function(core$_.int i, core$_.int i1, jni$_.JString string)
+    onProgress,
+    core$_.bool onProgress$async,
+    required void Function(core$_.int i, core$_.int j, jni$_.JString string)
+    onComplete,
+    core$_.bool onComplete$async,
+  }) = _$ProgressListener;
+
+  void onProgress(core$_.int i, core$_.int i1, jni$_.JString string);
+  core$_.bool get onProgress$async => false;
+  void onComplete(core$_.int i, core$_.int j, jni$_.JString string);
+  core$_.bool get onComplete$async => false;
+}
+
+final class _$ProgressListener with $ProgressListener {
+  _$ProgressListener({
+    required void Function(core$_.int i, core$_.int i1, jni$_.JString string)
+    onProgress,
+    this.onProgress$async = false,
+    required void Function(core$_.int i, core$_.int j, jni$_.JString string)
+    onComplete,
+    this.onComplete$async = false,
+  }) : _onProgress = onProgress,
+       _onComplete = onComplete;
+
+  final void Function(core$_.int i, core$_.int i1, jni$_.JString string)
+  _onProgress;
+  final core$_.bool onProgress$async;
+  final void Function(core$_.int i, core$_.int j, jni$_.JString string)
+  _onComplete;
+  final core$_.bool onComplete$async;
+
+  void onProgress(core$_.int i, core$_.int i1, jni$_.JString string) {
+    return _onProgress(i, i1, string);
+  }
+
+  void onComplete(core$_.int i, core$_.int j, jni$_.JString string) {
+    return _onComplete(i, j, string);
+  }
+}
+
+final class $ProgressListener$Type$ extends jni$_.JType<ProgressListener> {
+  @jni$_.internal
+  const $ProgressListener$Type$();
+
+  @jni$_.internal
+  @core$_.override
+  String get signature =>
+      r'Lcom/example/ffi_gen_jni_gen/bench/ProgressListener;';
+
+  @jni$_.internal
+  @core$_.override
+  String get className => r'com/example/ffi_gen_jni_gen/bench/ProgressListener';
+}
+
+/// from: `com.example.ffi_gen_jni_gen.bench.ValueProvider`
+extension type ValueProvider._(jni$_.JObject _$this) implements jni$_.JObject {
+  static final _class = jni$_.JClass.forName(
+    r'com/example/ffi_gen_jni_gen/bench/ValueProvider',
+  );
+
+  /// The type which includes information such as the signature of this class.
+  static const jni$_.JType<ValueProvider> type = $ValueProvider$Type$();
+
+  /// Maps a specific port to the implemented interface.
+  static final core$_.Map<core$_.int, $ValueProvider> _$impls = {};
+  static jni$_.JObjectPtr _$invoke(
+    core$_.int port,
+    jni$_.JObjectPtr descriptor,
+    jni$_.JObjectPtr args,
+  ) {
+    return _$invokeMethod(
+      port,
+      jni$_.MethodInvocation.fromAddresses(0, descriptor.address, args.address),
+    );
+  }
+
+  static final jni$_.Pointer<
+    jni$_.NativeFunction<
+      jni$_.JObjectPtr Function(jni$_.Int64, jni$_.JObjectPtr, jni$_.JObjectPtr)
+    >
+  >
+  _$invokePointer = jni$_.Pointer.fromFunction(_$invoke);
+
+  static jni$_.Pointer<jni$_.Void> _$invokeMethod(
+    core$_.int $p,
+    jni$_.MethodInvocation $i,
+  ) {
+    try {
+      final $d = $i.methodDescriptor.toDartString(releaseOriginal: true);
+      final $a = $i.args;
+      if ($d == r'provide(I)I') {
+        final $r = _$impls[$p]!.provide(
+          ($a![0] as jni$_.JInteger).toDartInt(releaseOriginal: true),
+        );
+        return $r.toJInteger().reference.toPointer();
+      }
+    } catch (e) {
+      return jni$_.ProtectedJniExtensions.newDartException(e);
+    }
+    return jni$_.nullptr;
+  }
+
+  static void implementIn(
+    jni$_.JImplementer implementer,
+    $ValueProvider $impl,
+  ) {
+    late final jni$_.RawReceivePort $p;
+    $p = jni$_.RawReceivePort(($m) {
+      if ($m == null) {
+        _$impls.remove($p.sendPort.nativePort);
+        $p.close();
+        return;
+      }
+      final $i = jni$_.MethodInvocation.fromMessage($m);
+      final $r = _$invokeMethod($p.sendPort.nativePort, $i);
+      $i.args?.release();
+      jni$_.ProtectedJniExtensions.returnResult($i.result, $r);
+    });
+    implementer.add(
+      r'com.example.ffi_gen_jni_gen.bench.ValueProvider',
+      $p,
+      _$invokePointer,
+      [],
+    );
+    final $a = $p.sendPort.nativePort;
+    _$impls[$a] = $impl;
+  }
+
+  factory ValueProvider.implement($ValueProvider $impl) {
+    final $i = jni$_.JImplementer();
+    implementIn($i, $impl);
+    return $i.implement<ValueProvider>();
+  }
+}
+
+extension ValueProvider$$Methods on ValueProvider {
+  static final _id_provide = ValueProvider._class.instanceMethodId(
+    r'provide',
+    r'(I)I',
+  );
+
+  static final _provide =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int32,)>,
+              )
+            >
+          >('globalEnv_CallIntMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public fun provide(input: kotlin.Int): kotlin.Int`
+  core$_.int provide(core$_.int i) {
+    final _$$selfRef = reference;
+    return _provide(_$$selfRef.nonNullPointer, _id_provide.pointer, i).integer;
+  }
+}
+
+abstract base mixin class $ValueProvider {
+  factory $ValueProvider({required core$_.int Function(core$_.int i) provide}) =
+      _$ValueProvider;
+
+  core$_.int provide(core$_.int i);
+}
+
+final class _$ValueProvider with $ValueProvider {
+  _$ValueProvider({required core$_.int Function(core$_.int i) provide})
+    : _provide = provide;
+
+  final core$_.int Function(core$_.int i) _provide;
+
+  core$_.int provide(core$_.int i) {
+    return _provide(i);
+  }
+}
+
+final class $ValueProvider$Type$ extends jni$_.JType<ValueProvider> {
+  @jni$_.internal
+  const $ValueProvider$Type$();
+
+  @jni$_.internal
+  @core$_.override
+  String get signature => r'Lcom/example/ffi_gen_jni_gen/bench/ValueProvider;';
+
+  @jni$_.internal
+  @core$_.override
+  String get className => r'com/example/ffi_gen_jni_gen/bench/ValueProvider';
+}
+
+/// from: `com.example.ffi_gen_jni_gen.bench.WorkHandle`
+extension type WorkHandle._(jni$_.JObject _$this) implements jni$_.JObject {
+  static final _class = jni$_.JClass.forName(
+    r'com/example/ffi_gen_jni_gen/bench/WorkHandle',
+  );
+
+  /// The type which includes information such as the signature of this class.
+  static const jni$_.JType<WorkHandle> type = $WorkHandle$Type$();
+  static final _id_new$ = _class.constructorId(r'(I)V');
+
+  static final _new$ =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int32,)>,
+              )
+            >
+          >('globalEnv_NewObject')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public void <init>(int i)`
+  /// The returned object must be released after use, by calling the [release] method.
+  factory WorkHandle(core$_.int i) {
+    final _$$classRef = _class.reference;
+    return _new$(_$$classRef.pointer, _id_new$.pointer, i).object<WorkHandle>();
+  }
+}
+
+extension WorkHandle$$Methods on WorkHandle {
+  static final _id_get$requestId = WorkHandle._class.instanceMethodId(
+    r'getRequestId',
+    r'()I',
+  );
+
+  static final _get$requestId =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallIntMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final int getRequestId()`
+  core$_.int get requestId {
+    final _$$selfRef = reference;
+    return _get$requestId(
+      _$$selfRef.nonNullPointer,
+      _id_get$requestId.pointer,
+    ).integer;
+  }
+
+  static final _id_get$cancelled = WorkHandle._class.instanceMethodId(
+    r'getCancelled',
+    r'()Z',
+  );
+
+  static final _get$cancelled =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallBooleanMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final boolean getCancelled()`
+  core$_.bool get cancelled {
+    final _$$selfRef = reference;
+    return _get$cancelled(
+      _$$selfRef.nonNullPointer,
+      _id_get$cancelled.pointer,
+    ).boolean;
+  }
+
+  static final _id_get$callbacksAttempted = WorkHandle._class.instanceMethodId(
+    r'getCallbacksAttempted',
+    r'()Ljava/util/concurrent/atomic/AtomicInteger;',
+  );
+
+  static final _get$callbacksAttempted =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final java.util.concurrent.atomic.AtomicInteger getCallbacksAttempted()`
+  /// The returned object must be released after use, by calling the [release] method.
+  AtomicInteger get callbacksAttempted {
+    final _$$selfRef = reference;
+    return _get$callbacksAttempted(
+      _$$selfRef.nonNullPointer,
+      _id_get$callbacksAttempted.pointer,
+    ).object<AtomicInteger>();
+  }
+
+  static final _id_get$callbackFailures = WorkHandle._class.instanceMethodId(
+    r'getCallbackFailures',
+    r'()Ljava/util/concurrent/atomic/AtomicInteger;',
+  );
+
+  static final _get$callbackFailures =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final java.util.concurrent.atomic.AtomicInteger getCallbackFailures()`
+  /// The returned object must be released after use, by calling the [release] method.
+  AtomicInteger get callbackFailures {
+    final _$$selfRef = reference;
+    return _get$callbackFailures(
+      _$$selfRef.nonNullPointer,
+      _id_get$callbackFailures.pointer,
+    ).object<AtomicInteger>();
+  }
+
+  static final _id_get$lastFailure = WorkHandle._class.instanceMethodId(
+    r'getLastFailure',
+    r'()Ljava/lang/String;',
+  );
+
+  static final _get$lastFailure =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final java.lang.String getLastFailure()`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JString? get lastFailure {
+    final _$$selfRef = reference;
+    return _get$lastFailure(
+      _$$selfRef.nonNullPointer,
+      _id_get$lastFailure.pointer,
+    ).object<jni$_.JString?>();
+  }
+
+  static final _id_set$lastFailure = WorkHandle._class.instanceMethodId(
+    r'setLastFailure',
+    r'(Ljava/lang/String;)V',
+  );
+
+  static final _set$lastFailure =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JThrowablePtr Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Pointer<jni$_.Void>,)>,
+              )
+            >
+          >('globalEnv_CallVoidMethod')
+          .asFunction<
+            jni$_.JThrowablePtr Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              jni$_.Pointer<jni$_.Void>,
+            )
+          >();
+
+  /// from: `public final void setLastFailure(java.lang.String string)`
+  set lastFailure(jni$_.JString? string) {
+    final _$$selfRef = reference;
+    final _$string = string?.reference ?? jni$_.jNullReference;
+    _set$lastFailure(
+      _$$selfRef.nonNullPointer,
+      _id_set$lastFailure.pointer,
+      _$string.pointer,
+    ).check();
+  }
+
+  static final _id_get$finished = WorkHandle._class.instanceMethodId(
+    r'getFinished',
+    r'()Z',
+  );
+
+  static final _get$finished =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallBooleanMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public final boolean getFinished()`
+  core$_.bool get finished {
+    final _$$selfRef = reference;
+    return _get$finished(
+      _$$selfRef.nonNullPointer,
+      _id_get$finished.pointer,
+    ).boolean;
+  }
+
+  static final _id_set$finished = WorkHandle._class.instanceMethodId(
+    r'setFinished',
+    r'(Z)V',
+  );
+
+  static final _set$finished =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JThrowablePtr Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+                jni$_.VarArgs<(jni$_.Int32,)>,
+              )
+            >
+          >('globalEnv_CallVoidMethod')
+          .asFunction<
+            jni$_.JThrowablePtr Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+              core$_.int,
+            )
+          >();
+
+  /// from: `public final void setFinished(boolean z)`
+  set finished(core$_.bool z) {
+    final _$$selfRef = reference;
+    _set$finished(
+      _$$selfRef.nonNullPointer,
+      _id_set$finished.pointer,
+      z ? 1 : 0,
+    ).check();
+  }
+
+  static final _id_cancel = WorkHandle._class.instanceMethodId(
+    r'cancel',
+    r'()V',
+  );
+
+  static final _cancel =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JThrowablePtr Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallVoidMethod')
+          .asFunction<
+            jni$_.JThrowablePtr Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public fun cancel(): kotlin.Unit`
+  void cancel() {
+    final _$$selfRef = reference;
+    _cancel(_$$selfRef.nonNullPointer, _id_cancel.pointer).check();
+  }
+
+  static final _id_status = WorkHandle._class.instanceMethodId(
+    r'status',
+    r'()Ljava/lang/String;',
+  );
+
+  static final _status =
+      jni$_.ProtectedJniExtensions.lookup<
+            jni$_.NativeFunction<
+              jni$_.JniResult Function(
+                jni$_.Pointer<jni$_.Void>,
+                jni$_.JMethodIDPtr,
+              )
+            >
+          >('globalEnv_CallObjectMethod')
+          .asFunction<
+            jni$_.JniResult Function(
+              jni$_.Pointer<jni$_.Void>,
+              jni$_.JMethodIDPtr,
+            )
+          >();
+
+  /// from: `public fun status(): kotlin.String`
+  /// The returned object must be released after use, by calling the [release] method.
+  jni$_.JString status() {
+    final _$$selfRef = reference;
+    return _status(
+      _$$selfRef.nonNullPointer,
+      _id_status.pointer,
+    ).object<jni$_.JString>();
+  }
+}
+
+final class $WorkHandle$Type$ extends jni$_.JType<WorkHandle> {
+  @jni$_.internal
+  const $WorkHandle$Type$();
+
+  @jni$_.internal
+  @core$_.override
+  String get signature => r'Lcom/example/ffi_gen_jni_gen/bench/WorkHandle;';
+
+  @jni$_.internal
+  @core$_.override
+  String get className => r'com/example/ffi_gen_jni_gen/bench/WorkHandle';
+}
+
+/// from: `kotlin.coroutines.Continuation`
+///
+/// WARNING: Continuation is a stub. To generate bindings for this class, include
+/// kotlin.coroutines.Continuation in your config's classes list.
+///
+extension type Continuation._(jni$_.JObject _$this) implements jni$_.JObject {
+  static const jni$_.JType<Continuation> type = $Continuation$Type$();
+}
+
+final class $Continuation$Type$ extends jni$_.JType<Continuation> {
+  @jni$_.internal
+  const $Continuation$Type$();
+
+  @jni$_.internal
+  @core$_.override
+  String get signature => r'Lkotlin/coroutines/Continuation;';
+
+  @jni$_.internal
+  @core$_.override
+  String get className => r'kotlin/coroutines/Continuation';
+}
+
+/// from: `java.util.concurrent.atomic.AtomicInteger`
+///
+/// WARNING: AtomicInteger is a stub. To generate bindings for this class, include
+/// java.util.concurrent.atomic.AtomicInteger in your config's classes list.
+///
+extension type AtomicInteger._(jni$_.JObject _$this) implements jni$_.JObject {
+  static const jni$_.JType<AtomicInteger> type = $AtomicInteger$Type$();
+}
+
+final class $AtomicInteger$Type$ extends jni$_.JType<AtomicInteger> {
+  @jni$_.internal
+  const $AtomicInteger$Type$();
+
+  @jni$_.internal
+  @core$_.override
+  String get signature => r'Ljava/util/concurrent/atomic/AtomicInteger;';
+
+  @jni$_.internal
+  @core$_.override
+  String get className => r'java/util/concurrent/atomic/AtomicInteger';
 }

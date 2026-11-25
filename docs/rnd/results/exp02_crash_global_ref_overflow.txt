@@ -1,0 +1,12 @@
+F/DEBUG   (13876): signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+F/DEBUG   (13876): Abort message: 'JNI ERROR (app bug): global reference table overflow (max=51200)global reference table dump:
+F/DEBUG   (13876):       #00 pc 0000000000070b8c  /apex/com.android.runtime/lib64/bionic/libc.so (abort+160) (BuildId: 7c7b3382b2452d5088b442a0e19bb0ac)
+F/DEBUG   (13876):       #01 pc 00000000009c0150  /apex/com.android.art/lib64/libart.so (art::Runtime::Abort(char const*)+616) (BuildId: 9d2fa628a1f38431dc07689a83cd4e80)
+F/DEBUG   (13876):       #02 pc 00000000000165ec  /apex/com.android.art/lib64/libbase.so (android::base::SetAborter(std::__1::function<void (char const*)>&&)::$_0::__invoke(char const*)+84) (BuildId: f6e9b1475f38ab920ee654aab9f9417d)
+F/DEBUG   (13876):       #03 pc 0000000000015d4c  /apex/com.android.art/lib64/libbase.so (android::base::LogMessage::~LogMessage()+544) (BuildId: f6e9b1475f38ab920ee654aab9f9417d)
+F/DEBUG   (13876):       #04 pc 00000000004f2ae8  /apex/com.android.art/lib64/libart.so (art::JavaVMExt::AddGlobalRef(art::Thread*, art::ObjPtr<art::mirror::Object>)+1596) (BuildId: 9d2fa628a1f38431dc07689a83cd4e80)
+F/DEBUG   (13876):       #05 pc 00000000004e7ef8  /apex/com.android.art/lib64/libart.so (art::JNI<true>::NewGlobalRef(_JNIEnv*, _jobject*)+156) (BuildId: 9d2fa628a1f38431dc07689a83cd4e80)
+F/DEBUG   (13876):       #06 pc 00000000004a5bdc  /apex/com.android.art/lib64/libart.so (art::(anonymous namespace)::CheckJNI::NewRef(char const*, _JNIEnv*, _jobject*, art::IndirectRefKind) (.__uniq.99033978352804627313491551960229047428)+240) (BuildId: 9d2fa628a1f38431dc07689a83cd4e80)
+F/DEBUG   (13876):       #07 pc 000000000000d0d8  /data/app/~~hstvLJ4SnYpH0JKH3xpzbQ==/com.example.ffi_gen_jni_gen-7sY1Fyir6lAy1AbjJdj0pA==/base.apk!libdartjni.so (offset 0x9e8000) (BuildId: b7b9b570eff3240a81ab0d58254c5723b1a3d4d8)
+F/DEBUG   (13876):       #08 pc 000000000000dd60  /data/app/~~hstvLJ4SnYpH0JKH3xpzbQ==/com.example.ffi_gen_jni_gen-7sY1Fyir6lAy1AbjJdj0pA==/base.apk!libdartjni.so (offset 0x9e8000) (globalEnv_NewObject+260) (BuildId: b7b9b570eff3240a81ab0d58254c5723b1a3d4d8)
+F/DEBUG   (13876):       #09 pc 00000000001a164c  /data/app/~~hstvLJ4SnYpH0JKH3xpzbQ==/com.example.ffi_gen_jni_gen-7sY1Fyir6lAy1AbjJdj0pA==/base.apk (offset 0x1824000) (BuildId: ea5eb4b3f9b5a09d6cf6de2255a1dcab)

@@ -1,6 +1,8 @@
 package com.example.ffi_gen_jni_gen
 
 import com.example.ffi_gen_jni_gen.bench.InteropBench
+import com.example.ffi_gen_jni_gen.channel.AsyncBenchChannel
+import com.example.ffi_gen_jni_gen.channel.DataBenchChannel
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
@@ -9,6 +11,8 @@ class MainActivity : FlutterActivity() {
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
         registerBenchChannel(flutterEngine)
+        DataBenchChannel(flutterEngine.dartExecutor.binaryMessenger)
+        AsyncBenchChannel(flutterEngine.dartExecutor.binaryMessenger)
     }
 
     /**

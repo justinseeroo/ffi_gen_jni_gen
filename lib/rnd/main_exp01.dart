@@ -14,12 +14,10 @@
 //
 //   adb exec-out run-as com.example.ffi_gen_jni_gen cat code_cache/exp01_report.json
 
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 
 import 'exp01_call_overhead.dart';
+import 'report_output.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +32,5 @@ Future<void> main() async {
   final report = await runExperiment01(
     log: (line) => debugPrint('EXP01 $line'),
   );
-  final file = File('${Directory.systemTemp.path}/exp01_report.json');
-  await file.writeAsString(const JsonEncoder.withIndent('  ').convert(report));
-  debugPrint('EXP01_DONE ${file.path}');
+  await saveReport('exp01', report);
 }

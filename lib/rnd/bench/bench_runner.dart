@@ -100,14 +100,16 @@ class BenchRunner {
       ticksToNanoseconds(stopwatch.elapsedTicks, stopwatch.frequency);
 
   /// Times a synchronous [call]. [call] gets the call index and returns
-  /// whether its result was correct.
+  /// whether its result was correct. [warmupCalls] overrides the runner's
+  /// default (e.g. fewer warm-up calls for multi-megabyte payloads).
   BenchResult measureSync({
     required String approach,
     required String operation,
     required int calls,
     required bool Function(int i) call,
+    int? warmupCalls,
   }) {
-    for (var i = 0; i < warmupCalls; i++) {
+    for (var i = 0; i < (warmupCalls ?? this.warmupCalls); i++) {
       call(i);
     }
     final runsNs = <int>[];
@@ -140,8 +142,9 @@ class BenchRunner {
     required String operation,
     required int calls,
     required Future<bool> Function(int i) call,
+    int? warmupCalls,
   }) async {
-    for (var i = 0; i < warmupCalls; i++) {
+    for (var i = 0; i < (warmupCalls ?? this.warmupCalls); i++) {
       await call(i);
     }
     final runsNs = <int>[];
